@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
+import { NavBar } from "./components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,26 +39,6 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
-  );
-}
-
-function NavBar() {
-  const navLinks = [
-    { href: "/", label: "Perry Fardella" },
-    { href: "/blog", label: "Blog" },
-    { href: "/projects", label: "Projects" },
-  ];
-
-  return (
-    <nav className="w-full mb-6">
-      <ul className="flex gap-4">
-        {navLinks.map((link) => (
-          <li key={link.href} className="hover:opacity-80 transition-opacity">
-            <Link href={link.href}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
   );
 }
 
