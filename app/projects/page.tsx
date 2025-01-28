@@ -7,3 +7,7 @@ export default function Projects() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Projects",
+};

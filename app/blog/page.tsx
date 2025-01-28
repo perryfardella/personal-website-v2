@@ -7,3 +7,7 @@ export default function Blog() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Blog",
+};

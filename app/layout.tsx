@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Perry Fardella",
+export const metadata = {
+  title: {
+    template: "%s | Perry Fardella",
+    default: "Perry Fardella", // This is used when no title is specified
+  },
   description: "The personal website of Perry Fardella",
 };
 
