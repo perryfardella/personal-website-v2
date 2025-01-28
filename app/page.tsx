@@ -2,8 +2,8 @@ export default function Home() {
   return (
     <div>
       <main>
-        <h2>Recent blog posts</h2>
-        <h2>Recent projects</h2>
+        <h1>Recent blog posts</h1>
+        <h1>Recent projects</h1>
       </main>
     </div>
   );
