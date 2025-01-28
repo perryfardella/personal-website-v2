@@ -2,10 +2,8 @@ export default function Home() {
   return (
     <div>
       <main>
-        <p>
-          Here is some content for the home page, in fact here's a shitload of
-          content for hte home page, let's go to another line at least.
-        </p>
+        <h2>Recent blog posts</h2>
+        <h2>Recent projects</h2>
       </main>
     </div>
   );
