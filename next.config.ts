@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
-import nextMDX from "@next/mdx";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   /* config options here */
   pageExtensions: ["mdx", "tsx"],
 };
 
-const withMDX = nextMDX({
+const withMDX = createMDX({
   // Add markdown plugins here, as desired
 });
 

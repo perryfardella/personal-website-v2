@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+// import type { Metadata } from "next"; What was this being used for, do I need it?
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { NavBar } from "./components/NavBar";
 
