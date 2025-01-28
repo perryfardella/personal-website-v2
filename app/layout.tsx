@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,54 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <NavBar />
+          <SocialLinks />
+        </header>
         {children}
       </body>
     </html>
+  );
+}
+
+function NavBar() {
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    { href: "/projects", label: "Projects" },
+  ];
+
+  return (
+    <nav>
+      <ul>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+function SocialLinks() {
+  const socialLinks = [
+    { href: "https://github.com/perryfardella", label: "Github" },
+    { href: "https://www.linkedin.com/in/perry-fardella/", label: "LinkedIn" },
+    { href: "https://x.com/perryfardella", label: "X" },
+  ];
+
+  return (
+    <nav>
+      <ul>
+        {socialLinks.map((link) => (
+          <li key={link.href + link.label}>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
