@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col p-8 pt-12`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col p-8 pt-12 max-w-xl w-full justify-self-center`}
       >
         <header>
           <NavBar />
@@ -49,7 +49,7 @@ function NavBar() {
   ];
 
   return (
-    <nav>
+    <nav className="w-full mb-6">
       <ul className="flex gap-4">
         {navLinks.map((link) => (
           <li key={link.href} className="hover:opacity-80 transition-opacity">
