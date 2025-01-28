@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,7 @@ export default function RootLayout({
 
 function NavBar() {
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/", label: "Perry Fardella" },
     { href: "/blog", label: "Blog" },
     { href: "/projects", label: "Projects" },
   ];
@@ -70,9 +71,13 @@ function SocialLinks() {
       <ul>
         {socialLinks.map((link) => (
           <li key={link.href + link.label}>
-            <a href={link.href} target="_blank" rel="noopener noreferrer">
-              {link.label}
-            </a>
+            <SocialIcon
+              url={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              bgColor="transparent"
+              fgColor="#9ca3af"
+            />
           </li>
         ))}
       </ul>
