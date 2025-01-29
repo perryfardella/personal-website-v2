@@ -1,7 +1,7 @@
 // import type { Metadata } from "next"; What was this being used for, do I need it?
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SocialIcon } from "react-social-icons";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { NavBar } from "./components/NavBar";
 
 const geistSans = Geist({
@@ -46,27 +46,42 @@ export default function RootLayout({
 
 function SocialLinks() {
   const socialLinks = [
-    { href: "https://github.com/perryfardella", label: "Github" },
-    { href: "https://www.linkedin.com/in/perry-fardella/", label: "LinkedIn" },
-    { href: "https://x.com/perryfardella", label: "X" },
+    {
+      href: "https://github.com/perryfardella",
+      label: "Github",
+      icon: Github,
+    },
+    {
+      href: "https://www.linkedin.com/in/perry-fardella/",
+      label: "LinkedIn",
+      icon: Linkedin,
+    },
+    {
+      href: "https://x.com/perryfardella",
+      label: "X",
+      icon: Twitter,
+    },
   ];
 
   return (
     <nav className="flex justify-center">
-      <ul className="flex gap-2">
-        {socialLinks.map((link) => (
-          <li key={link.href + link.label}>
-            <SocialIcon
-              url={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              bgColor="transparent"
-              fgColor="#9ca3af"
-              className="hover:opacity-80 transition-opacity"
-              style={{ height: 36, width: 36 }}
-            />
-          </li>
-        ))}
+      <ul className="flex gap-4">
+        {socialLinks.map((link) => {
+          const Icon = link.icon;
+          return (
+            <li key={link.href + link.label}>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label={link.label}
+              >
+                <Icon size={24} />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
