@@ -9,29 +9,21 @@ type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
 const components = {
-  h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
-  ),
-  h2: (props: HeadingProps) => (
-    <h2 className=" font-medium mt-8 mb-3" {...props} />
-  ),
-  h3: (props: HeadingProps) => (
-    <h3 className=" font-medium mt-8 mb-3" {...props} />
-  ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
-  p: (props: ParagraphProps) => <p className=" leading-snug" {...props} />,
+  h1: (props: HeadingProps) => <h1 className="pt-12 mb-0" {...props} />,
+  h2: (props: HeadingProps) => <h2 className="mt-8 mb-3" {...props} />,
+  h3: (props: HeadingProps) => <h3 className="mt-8 mb-3" {...props} />,
+  h4: (props: HeadingProps) => <h4 className="" {...props} />,
+  p: (props: ParagraphProps) => <p className="leading-snug" {...props} />,
   ol: (props: ListProps) => (
-    <ol className=" list-decimal pl-5 space-y-2" {...props} />
+    <ol className="list-decimal pl-5 space-y-2" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className=" list-disc pl-5 space-y-1" {...props} />
+    <ul className="list-disc pl-5 space-y-1" {...props} />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
-  em: (props: ComponentPropsWithoutRef<"em">) => (
-    <em className="font-medium" {...props} />
-  ),
+  em: (props: ComponentPropsWithoutRef<"em">) => <em className="" {...props} />,
   strong: (props: ComponentPropsWithoutRef<"strong">) => (
-    <strong className="font-medium" {...props} />
+    <strong className="" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className = "text-blue-500 hover:text-blue-700";
@@ -61,7 +53,7 @@ const components = {
       </a>
     );
   },
-  //   code: ({ children, ...props }: ComponentPropsWithoutRef<'code'>) => {
+  //   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
   //     const codeHTML = highlight(children as string);
   //     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
   //   },
