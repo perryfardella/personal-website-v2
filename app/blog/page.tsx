@@ -39,7 +39,7 @@ export default async function Blog() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Blog Posts</h1>
+      {/* <h1 className="text-2xl font-bold mb-6">Blog Posts</h1> */}
       <div className="space-y-8">
         {/* // TODO: typing */}
         {posts.map((post: any) => (
