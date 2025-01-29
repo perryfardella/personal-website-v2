@@ -25,8 +25,8 @@ export function NavBar() {
         {navLinks.map((link) => (
           <li
             key={link.href}
-            className={`hover:opacity-80 transition-opacity ${
-              isActive(link.href) ? "underline" : ""
+            className={`hover:opacity-60 transition-opacity ${
+              isActive(link.href) ? "border-b-2" : ""
             }`}
           >
             <Link href={link.href}>{link.label}</Link>

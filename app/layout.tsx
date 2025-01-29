@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col p-8 pt-12 max-w-xl w-full justify-self-center`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col p-8 max-w-xl w-full justify-self-center`}
       >
         <header>
           <NavBar />
@@ -74,7 +74,7 @@ function SocialLinks() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-60 transition-opacity"
                 aria-label={link.label}
               >
                 <Icon size={24} />
