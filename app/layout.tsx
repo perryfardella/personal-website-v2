@@ -68,11 +68,11 @@ function SocialLinks() {
 
   return (
     <nav className="flex justify-center">
-      <ul className="flex gap-4">
+      <ul className="flex gap-4 pl-0">
         {socialLinks.map((link) => {
           const Icon = link.icon;
           return (
-            <li key={link.href + link.label}>
+            <li key={link.href + link.label} className="list-none mb-0">
               <a
                 href={link.href}
                 target="_blank"

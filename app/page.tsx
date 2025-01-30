@@ -5,10 +5,23 @@ export default function Home() {
   return (
     <div>
       <main className="space-y-8">
-        <p>
-          Hey, I'm a full stack software engineer currently travelling the world
-          full-time.
-        </p>
+        <div className="space-y-4">
+          <p>
+            Hey, I'm a full stack software engineer and ex tax accountant
+            currently travelling the world full-time as I take a year sabbatical
+            from from my job.
+          </p>
+          <p>
+            Professionally, I'm currently contributing to some open source
+            software like Strapi and working on projects of my own.
+          </p>
+          <p>
+            Recreationally I'm soaking in different cultures, hanging with
+            friends, tasting every food I can get my hands on and keeping fit by
+            hitting the gym and training BJJ and Muay Thai.
+          </p>
+        </div>
+
         <BlogPosts />
         <Projects />
         <div>

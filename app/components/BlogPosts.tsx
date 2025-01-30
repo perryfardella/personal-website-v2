@@ -39,21 +39,24 @@ export async function BlogPosts() {
   return (
     <section>
       <h2>Blog Posts</h2>
-      <ul className="space-y-2 list-disc mt-2">
+      <ul>
         {posts.map((post: any) => (
-          <li key={post.slug} className="flex gap-4 items-center">
-            <div className="text-sm text-gray-600">
+          <li key={post.slug}>
+            {/* <div className="text-sm text-gray-600">
               {new Date(post.metadata.publishedAt).toLocaleDateString("en-AU", {
                 day: "numeric",
                 month: "numeric",
                 year: "numeric",
               })}
-            </div>
-            <p>
-              <a href={`/blog/${post.slug}`} className="hover:underline">
-                {post.metadata.title}
-              </a>
-            </p>
+            </div> */}
+            {/* <p> */}
+            <a
+              href={`/blog/${post.slug}`}
+              className="hover:underline text-blue-500 hover:text-blue-700"
+            >
+              {post.metadata.title}
+            </a>
+            {/* </p> */}
           </li>
         ))}
       </ul>
