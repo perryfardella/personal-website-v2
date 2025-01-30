@@ -8,10 +8,10 @@ body {
 
 @layer base {
   h1 {
-    @apply scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl;
+    @apply scroll-m-20 text-3xl font-extrabold tracking-tight;
   }
   h2 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 pb-2;
+    @apply scroll-m-20 text-2xl mt-6 mb-3 font-semibold tracking-tight;
   }
   h3 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight;
@@ -22,10 +22,14 @@ body {
   p {
   }
   ul {
+    @apply list-disc pl-5;
   }
   ol {
   }
   li {
+    @apply mb-2;
+  }
+  a {
   }
   blockquote {
     /* @apply mt-6 border-l-2 pl-6 italic; */

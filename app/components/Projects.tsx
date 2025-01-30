@@ -1,7 +1,7 @@
-export const RecentProjects = () => {
+export const Projects = () => {
   return (
     <section>
-      <h2>Recent Projects</h2>
+      <h2>Projects</h2>
       <ul className="mt-2">
         <li>Personal website</li>
         <li>CGT Calculator</li>

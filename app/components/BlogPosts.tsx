@@ -33,12 +33,12 @@ async function getBlogPosts() {
     .slice(0, 4); // Only return the 4 most recent posts
 }
 
-export async function RecentBlogPosts() {
+export async function BlogPosts() {
   const posts = await getBlogPosts();
 
   return (
     <section>
-      <h2>Recent Blog Posts</h2>
+      <h2>Blog Posts</h2>
       <ul className="space-y-2 list-disc mt-2">
         {posts.map((post: any) => (
           <li key={post.slug} className="flex gap-4 items-center">

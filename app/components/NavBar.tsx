@@ -22,15 +22,19 @@ export function NavBar() {
 
   return (
     <nav className="flex w-full mb-6 justify-between">
-      <ul className="flex gap-4">
-        {navLinks.map((link) => (
-          <li key={link.href} className={`hover:opacity-60 transition-opacity`}>
-            <Link href={link.href}>
-              <h1>{link.label}</h1>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {/* <ul className="flex gap-4"> */}
+      {navLinks.map((link) => (
+        // <li key={link.href} className={`hover:opacity-60 transition-opacity`}>
+        <Link
+          href={link.href}
+          key={link.href}
+          className="hover:opacity-60 transition-opacity"
+        >
+          <h1>{link.label}</h1>
+        </Link>
+        // </li>
+      ))}
+      {/* </ul> */}
       <ThemeToggle />
     </nav>
   );
