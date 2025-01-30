@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { NavBar } from "./components/NavBar";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,13 +33,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col p-8 max-w-xl w-full justify-self-center`}
       >
-        <header>
-          <NavBar />
-        </header>
-        <main className="flex-1">{children}</main>
-        <footer>
-          <SocialLinks />
-        </footer>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <header>
+            <NavBar />
+          </header>
+          <main className="flex-1">{children}</main>
+          <footer>
+            <SocialLinks />
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
