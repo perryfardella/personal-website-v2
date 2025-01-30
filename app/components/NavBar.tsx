@@ -9,28 +9,25 @@ export function NavBar() {
 
   const navLinks = [
     { href: "/", label: "Perry Fardella" },
-    { href: "/blog", label: "Blog" },
-    { href: "/projects", label: "Projects" },
+    // { href: "/blog", label: "Blog" },
+    // { href: "/projects", label: "Projects" },
   ];
 
-  const isActive = (href: string) => {
-    if (href === "/") {
-      return pathname === href;
-    }
-    return pathname.startsWith(href);
-  };
+  // const isActive = (href: string) => {
+  //   if (href === "/") {
+  //     return pathname === href;
+  //   }
+  //   return pathname.startsWith(href);
+  // };
 
   return (
     <nav className="flex w-full mb-6 justify-between">
       <ul className="flex gap-4">
         {navLinks.map((link) => (
-          <li
-            key={link.href}
-            className={`hover:opacity-60 transition-opacity ${
-              isActive(link.href) ? "border-b-2" : ""
-            }`}
-          >
-            <Link href={link.href}>{link.label}</Link>
+          <li key={link.href} className={`hover:opacity-60 transition-opacity`}>
+            <Link href={link.href}>
+              <h1>{link.label}</h1>
+            </Link>
           </li>
         ))}
       </ul>

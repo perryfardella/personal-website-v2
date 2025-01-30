@@ -11,7 +11,7 @@ body {
     @apply scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl;
   }
   h2 {
-    @apply scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 border-b pb-2;
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 pb-2;
   }
   h3 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight;
@@ -31,7 +31,7 @@ body {
     /* @apply mt-6 border-l-2 pl-6 italic; */
   }
   :root {
-    --background: 47 100% 95%;
+    --background: 48 20% 93%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
