@@ -44,7 +44,7 @@ export default async function Blog() {
         {/* // TODO: typing */}
         {posts.map((post: any) => (
           <article key={post.slug} className="space-y-2">
-            <h2 className="text-xl">
+            <h2>
               <a href={`/blog/${post.slug}`} className="hover:underline">
                 {post.metadata.title}
               </a>

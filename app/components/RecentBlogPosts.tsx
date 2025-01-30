@@ -38,21 +38,25 @@ export async function RecentBlogPosts() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-4">Recent Blog Posts</h2>
-      <div className="space-y-2">
+      <h2>Recent Blog Posts</h2>
+      <ul className="space-y-2 list-disc mt-2">
         {posts.map((post: any) => (
-          <article key={post.slug} className="flex gap-4 items-center">
-            <div>
-              {new Date(post.metadata.publishedAt).toLocaleDateString()}
+          <li key={post.slug} className="flex gap-4 items-center">
+            <div className="text-sm text-gray-600">
+              {new Date(post.metadata.publishedAt).toLocaleDateString("en-AU", {
+                day: "numeric",
+                month: "numeric",
+                year: "numeric",
+              })}
             </div>
-            <h3>
+            <p>
               <a href={`/blog/${post.slug}`} className="hover:underline">
                 {post.metadata.title}
               </a>
-            </h3>
-          </article>
+            </p>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

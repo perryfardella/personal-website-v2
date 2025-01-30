@@ -8,12 +8,16 @@ body {
 
 @layer base {
   h1 {
+    @apply scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl;
   }
   h2 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 border-b pb-2;
   }
   h3 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
   }
   h4 {
+    @apply scroll-m-20 text-lg font-semibold tracking-tight;
   }
   p {
   }
@@ -24,6 +28,7 @@ body {
   li {
   }
   blockquote {
+    /* @apply mt-6 border-l-2 pl-6 italic; */
   }
   :root {
     --background: 0 0% 100%;
