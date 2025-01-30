@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function NavBar() {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ export function NavBar() {
   };
 
   return (
-    <nav className="w-full mb-6">
+    <nav className="flex w-full mb-6 justify-between">
       <ul className="flex gap-4">
         {navLinks.map((link) => (
           <li
@@ -33,6 +34,7 @@ export function NavBar() {
           </li>
         ))}
       </ul>
+      <ThemeToggle />
     </nav>
   );
 }
