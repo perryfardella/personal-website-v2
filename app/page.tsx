@@ -7,7 +7,7 @@ export default function Home() {
       <main className="space-y-8">
         <div className="space-y-4">
           <p>
-            Hey, I'm a full stack software engineer and ex tax accountant
+            Hey, I'm a full stack software engineer and ex tax accountant.
             currently travelling the world full-time as I take a year sabbatical
             from from my job.
           </p>
