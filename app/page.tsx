@@ -7,18 +7,24 @@ export default function Home() {
       <main className="space-y-8">
         <div className="space-y-4">
           <p>
-            Hey, I'm a full stack software engineer and an ex tax accountant.
-            currently travelling the world full-time as I take a year sabbatical
-            from my job.
+            Hey, I'm a Software Engineer and Tax Accountant. currently
+            travelling the world full-time as I take a year sabbatical from my
+            job.
           </p>
           <p>
-            Professionally, I'm currently contributing to some open source
-            software like Strapi and working on projects of my own.
+            I'm interested in all things finance, tech and indie hacking and
+            will be working on open source software and building some projects
+            of my own throughout the year.
           </p>
           <p>
-            Recreationally, I'm soaking in different cultures, hanging with
-            friends, tasting every food I can get my hands on, and keeping fit
-            by hitting the gym and training BJJ and Muay Thai.
+            Away from the computer, I'm a BJJ Blue Belt, absolute novice at Muay
+            Thai and enjoy reading, seeing live music, trying new
+            activities/foods and hanging out with my friends and family.
+          </p>
+          <p>
+            I'm currently probably in a coffee shop in Thailand, a 7-Eleven in
+            Japan or a co-working space in Europe. Slide in my X dm's or email
+            me if you need me.
           </p>
         </div>
 
