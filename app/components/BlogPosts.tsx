@@ -1,6 +1,14 @@
 import { promises as fs } from "fs";
 import path from "path";
 
+type BlogPost = {
+  slug: string;
+  metadata: {
+    title: string;
+    publishedAt: string;
+  };
+};
+
 // Function to get blog posts (similar to the one in blog/page.tsx)
 async function getBlogPosts() {
   const postsDirectory = path.join(process.cwd(), "app/blog");
@@ -11,10 +19,10 @@ async function getBlogPosts() {
       .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
       .map(async (directory) => {
         try {
-          const module = await import(`../blog/${directory.name}/page.mdx`);
+          const postModule = await import(`../blog/${directory.name}/page.mdx`);
           return {
             slug: directory.name,
-            metadata: module.metadata,
+            metadata: postModule.metadata,
           };
         } catch (e) {
           console.error(`Error loading ${directory.name}:`, e);
@@ -24,9 +32,9 @@ async function getBlogPosts() {
   );
 
   return posts
-    .filter(Boolean)
+    .filter((post): post is BlogPost => post !== null)
     .sort(
-      (a: any, b: any) =>
+      (a, b) =>
         new Date(b.metadata.publishedAt).getTime() -
         new Date(a.metadata.publishedAt).getTime()
     )
@@ -40,7 +48,7 @@ export async function BlogPosts() {
     <section>
       <h2>Blog Posts</h2>
       <ul>
-        {posts.map((post: any) => (
+        {posts.map((post: BlogPost) => (
           <li key={post.slug}>
             {/* <div className="text-sm text-gray-600">
               {new Date(post.metadata.publishedAt).toLocaleDateString("en-AU", {

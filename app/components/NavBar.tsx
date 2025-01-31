@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function NavBar() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Perry Fardella" },
