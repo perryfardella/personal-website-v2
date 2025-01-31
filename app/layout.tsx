@@ -4,6 +4,7 @@ import "./globals.css";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { NavBar } from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,10 @@ export default function RootLayout({
           <header>
             <NavBar />
           </header>
-          <main className="w-full space-y-6">{children}</main>
+          <main className="w-full space-y-6">
+            {children}
+            <Analytics />
+          </main>
           <footer>
             <SocialLinks />
           </footer>
