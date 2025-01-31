@@ -37,7 +37,7 @@ export default function RootLayout({
           <header>
             <NavBar />
           </header>
-          <main className="flex-1">{children}</main>
+          <main className="w-full space-y-6">{children}</main>
           <footer>
             <SocialLinks />
           </footer>
@@ -67,7 +67,7 @@ function SocialLinks() {
   ];
 
   return (
-    <nav className="flex justify-center">
+    <nav className="flex justify-center mt-12">
       <ul className="flex gap-4 pl-0">
         {socialLinks.map((link) => {
           const Icon = link.icon;
