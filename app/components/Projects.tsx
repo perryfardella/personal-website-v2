@@ -1,33 +1,20 @@
+import { ExternalLink } from "./ExternalLink";
+
 export const Projects = () => {
   return (
     <section>
       <h2>Projects</h2>
       <ul className="mt-2">
         <li>
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/perryfardella/personal-website-v2"
-          >
+          <ExternalLink href="https://github.com/perryfardella/personal-website-v2">
             Personal website
-          </a>
+          </ExternalLink>
         </li>
         <li>
-          <a
-            className="text-blue-500 hover:text-blue-700"
-            href="https://github.com/perryfardella/cgt-calculator"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://github.com/perryfardella/cgt-calculator">
             CGT Calculator
-          </a>
+          </ExternalLink>
         </li>
-        {/* <li>
-          <a className="text-blue-500 hover:text-blue-700">
-            Ranked Leaderboard
-          </a>
-        </li> */}
       </ul>
     </section>
   );

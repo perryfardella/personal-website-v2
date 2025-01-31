@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React, { ComponentPropsWithoutRef } from "react";
+import { InternalLink } from "./app/components/InternalLink";
+import { ExternalLink } from "./app/components/ExternalLink";
 
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
@@ -26,31 +28,24 @@ const components = {
     <strong className="" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = "text-blue-500 hover:text-blue-700";
     if (href?.startsWith("/")) {
       return (
-        <Link href={href} className={className} {...props}>
+        <InternalLink href={href} {...props}>
           {children}
-        </Link>
+        </InternalLink>
       );
     }
     if (href?.startsWith("#")) {
       return (
-        <a href={href} className={className} {...props}>
+        <a href={href} className="text-blue-500 hover:text-blue-700" {...props}>
           {children}
         </a>
       );
     }
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-        {...props}
-      >
+      <ExternalLink href={href || "#"} {...props}>
         {children}
-      </a>
+      </ExternalLink>
     );
   },
   //   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {

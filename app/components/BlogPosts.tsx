@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { InternalLink } from "./InternalLink";
 
 type BlogPost = {
   slug: string;
@@ -58,12 +59,9 @@ export async function BlogPosts() {
               })}
             </div> */}
             {/* <p> */}
-            <a
-              href={`/blog/${post.slug}`}
-              className="hover:underline text-blue-500 hover:text-blue-700"
-            >
+            <InternalLink href={`/blog/${post.slug}`}>
               {post.metadata.title}
-            </a>
+            </InternalLink>
             {/* </p> */}
           </li>
         ))}

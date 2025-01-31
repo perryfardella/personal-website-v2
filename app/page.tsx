@@ -1,4 +1,5 @@
 import { BlogPosts } from "./components/BlogPosts";
+import { ExternalLink } from "./components/ExternalLink";
 import { Projects } from "./components/Projects";
 
 export default function Home() {
@@ -34,14 +35,9 @@ export default function Home() {
           <h2>Interviews</h2>
           <ul>
             <li>
-              <a
-                href="https://www.youtube.com/watch?v=u3n-TuMHPLE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-              >
+              <ExternalLink href="https://www.youtube.com/watch?v=u3n-TuMHPLE">
                 Around the blockchain podcast
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </div>
