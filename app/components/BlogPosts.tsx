@@ -10,7 +10,7 @@ type BlogPost = {
   };
 };
 
-// Function to get blog posts (similar to the one in blog/page.tsx)
+// Function to get blog posts
 async function getBlogPosts() {
   const postsDirectory = path.join(process.cwd(), "app/blog");
   const entries = await fs.readdir(postsDirectory, { withFileTypes: true });
@@ -38,8 +38,7 @@ async function getBlogPosts() {
       (a, b) =>
         new Date(b.metadata.publishedAt).getTime() -
         new Date(a.metadata.publishedAt).getTime()
-    )
-    .slice(0, 4); // Only return the 4 most recent posts
+    );
 }
 
 export async function BlogPosts() {
@@ -51,18 +50,9 @@ export async function BlogPosts() {
       <ul>
         {posts.map((post: BlogPost) => (
           <li key={post.slug}>
-            {/* <div className="text-sm text-gray-600">
-              {new Date(post.metadata.publishedAt).toLocaleDateString("en-AU", {
-                day: "numeric",
-                month: "numeric",
-                year: "numeric",
-              })}
-            </div> */}
-            {/* <p> */}
             <InternalLink href={`/blog/${post.slug}`}>
               {post.metadata.title}
             </InternalLink>
-            {/* </p> */}
           </li>
         ))}
       </ul>
