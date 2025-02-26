@@ -10,22 +10,12 @@ export default function Home() {
           <p>
             Hey, I&apos;m a Software Engineer and Tax Accountant. currently
             travelling the world full-time as I take a year sabbatical from my
-            job.
-          </p>
-          <p>
-            I&apos;m interested in all things finance, tech and indie hacking
-            and will be working on open source software and building some
-            projects of my own throughout the year.
+            job to chill out a little bit and work on side projects.
           </p>
           <p>
             Away from the computer, I&apos;m a BJJ Blue Belt, absolute novice at
             Muay Thai and enjoy reading, seeing live music, trying new
             activities/foods and hanging out with my friends and family.
-          </p>
-          <p>
-            I&apos;m currently probably in a coffee shop in Thailand, a 7-Eleven
-            in Japan or a co-working space in Europe. Slide in my X dm&apos;s or
-            email me if you need me.
           </p>
         </div>
 
