@@ -1,0 +1,33 @@
+export const metadata = {
+  title: "I'm me... @perryfardella.com",
+  // yyyy-mm-dd
+  publishedAt: "2025-03-11",
+  summary: "I'm finally me, and not some Outlook or Google phony.",
+  tags: ["webdev"],
+};
+
+<h1 className="text-5xl mb-6">{metadata.title}</h1>
+
+<time dateTime={metadata.publishedAt}>
+  {new Date(metadata.publishedAt).toLocaleDateString("en-AU", {
+    year: "numeric",
+    month: "long",
+  })}
+</time>
+
+## So I decided to create a new email address using my domain name
+
+So last night I created a new email address for myself, using my custom domain.
+So now you can reach me at [me@perryfardella.com](mailto:me@perryfardella.com).
+
+Up until this point I've been an Outlook/Gmail man, but thought since I now have my own custom domain, I should use it.
+It feels very liberating to be a bit more control of my email also. Of course I'm still using an external email provider, but I can change that at any time.
+
+It's also just been a fun learning experience working out how to actually use my domain to set up a custom email address.
+Then there's setting my new email address up on my phone and computer, testing everything works as expected, etc.
+
+## The how
+
+I use Namecheap for my domain registration, and they offer an email hosting service.
+I did some research online about what my options are and that seemed like the best value option for my needs.
+So right now I'm paying just over $4AUD/mo for over 30GB storage as well as all the features you'd expect from an email provider.
