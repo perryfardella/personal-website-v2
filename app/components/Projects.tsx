@@ -12,7 +12,14 @@ export const Projects = () => {
         </li>
         <li>
           <ExternalLink href="https://github.com/perryfardella/cgt-calculator">
-            CGT Calculator
+            CGT Calculator - A tool to calculate your net capital gains tax from
+            all sources.
+          </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="https://github.com/perryfardella/fucket-list">
+            The Fucket List - A list app for building a bucket list of stretch
+            goals for life.
           </ExternalLink>
         </li>
       </ul>
