@@ -1,4 +1,3 @@
-import { BlogPosts } from "./components/BlogPosts";
 import { ExternalLink } from "./components/ExternalLink";
 import { Projects } from "./components/Projects";
 
@@ -13,13 +12,12 @@ export default function Home() {
             job to chill out a little bit and work on side projects.
           </p>
           <p>
-            Away from the computer, I&apos;m a BJJ Blue Belt, absolute novice at
-            Muay Thai and enjoy reading, seeing live music, trying new
-            activities/foods and hanging out with my friends and family.
+            Away from the computer, I spend most of my free time training BJJ,
+            reading or playing video games.
           </p>
         </div>
 
-        <BlogPosts />
+        {/* <BlogPosts /> */}
         <Projects />
         <div>
           <h2>Interviews</h2>
