@@ -1,7 +1,7 @@
 // import type { Metadata } from "next"; What was this being used for, do I need it?
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Book } from "lucide-react";
 import { NavBar } from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
@@ -72,6 +72,11 @@ function SocialLinks() {
       href: "mailto:me@perryfardella.com",
       label: "Email",
       icon: Mail,
+    },
+    {
+      href: "https://perryfardella.substack.com",
+      label: "Substack",
+      icon: Book,
     },
   ];
 
