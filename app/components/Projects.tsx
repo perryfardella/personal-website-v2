@@ -39,6 +39,13 @@ const ProjectItem = ({
 export const Projects = () => {
   const projects = [
     {
+      title: "The AI Toolkit",
+      description:
+        "A collection of AI tools built using Vercel AI SDK - Contact me for access",
+      githubUrl: "https://github.com/perryfardella/ai-toolkit",
+      liveUrl: "https://ai-toolkit-xi.vercel.app/",
+    },
+    {
       title: "Personal website",
       githubUrl: "https://github.com/perryfardella/personal-website-v2",
       liveUrl: "https://perryfardella.com",
