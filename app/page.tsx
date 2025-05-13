@@ -17,7 +17,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* <BlogPosts /> */}
         <Projects />
         <div>
           <h2>Interviews</h2>
