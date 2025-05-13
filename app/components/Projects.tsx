@@ -48,7 +48,7 @@ export const Projects = () => {
       description:
         "A tool to calculate your net capital gains tax from all sources",
       githubUrl: "https://github.com/perryfardella/cgt-calculator",
-      liveUrl: "https://cgt-calculator.perryfardella.com",
+      liveUrl: "https://cgt-calculator.com",
     },
     {
       title: "The Fucket List",
