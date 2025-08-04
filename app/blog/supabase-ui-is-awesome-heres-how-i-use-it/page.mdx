@@ -1,0 +1,35 @@
+export const metadata = {
+  title:
+    "How to use Supabase and their new UI framework to get your apps off the ground fast.",
+  // yyyy-mm-dd
+  //   TODO: Clean up this publishing date to make it dd/mm/yyyy
+  publishedAt: "2025-08-04",
+  summary: "Supabase UI is awesome, here's how I use it",
+  tags: ["webdev"],
+};
+
+<h1 className="text-5xl mb-6">{metadata.title}</h1>
+
+<time dateTime={metadata.publishedAt}>
+  {new Date(metadata.publishedAt).toLocaleDateString("en-AU", {
+    year: "numeric",
+    month: "long",
+  })}
+</time>
+
+## Supa-base...?
+
+Supabase is an open-source alternative to Firebase, both of these services are something called a BaaS (Backend as a Service).
+Essentially this just means that these services provide a backend for your apps, so you don't have to worry about setting up your own.
+Supabase can be self-hosted, or you can use their hosted service for a fee, although there is a generous free tier.
+I use Supabase because it handles everything for me, user auth, database, storage, emails, etc.
+It allows me to get a new project off the ground quickly, and I can focus on the frontend and business logic.
+
+## Supabase UI is awesome
+
+Now with Supabase doing all the grunt work on the backend, I can focus on the frontend code for my projects.
+However, the people over at Supabase wanted to make my life even easier, so they released Supabase UI.
+
+## Why I use it
+
+## How I use it
