@@ -1,11 +1,10 @@
 // import type { Metadata } from "next"; What was this being used for, do I need it?
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Github, Linkedin, Twitter, Mail, Book } from "lucide-react";
 import { NavBar } from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
-import Link from "next/link";
+import { Footer } from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,72 +38,15 @@ export default function RootLayout({
           <header>
             <NavBar />
           </header>
-          <main className="w-full space-y-6">
+          <main className="w-full space-y-6 flex-1">
             {children}
             <Analytics />
           </main>
           <footer>
-            <SocialLinks />
+            <Footer />
           </footer>
         </ThemeProvider>
       </body>
     </html>
-  );
-}
-
-function SocialLinks() {
-  const socialLinks = [
-    {
-      href: "https://github.com/perryfardella",
-      label: "Github",
-      icon: Github,
-    },
-    {
-      href: "https://www.linkedin.com/in/perry-fardella/",
-      label: "LinkedIn",
-      icon: Linkedin,
-    },
-    {
-      href: "https://x.com/perryfardella",
-      label: "X",
-      icon: Twitter,
-    },
-    {
-      href: "mailto:me@perryfardella.com",
-      label: "Email",
-      icon: Mail,
-    },
-  ];
-
-  return (
-    <nav className="flex justify-center mt-12">
-      <ul className="flex gap-4 pl-0">
-        {socialLinks.map((link) => {
-          const Icon = link.icon;
-          return (
-            <li key={link.href + link.label} className="list-none mb-0">
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-60 transition-opacity"
-                aria-label={link.label}
-              >
-                <Icon size={24} />
-              </a>
-            </li>
-          );
-        })}
-        <li key="blog" className="list-none mb-0">
-          <Link
-            href="/blog"
-            className="hover:opacity-60 transition-opacity"
-            aria-label="Blog"
-          >
-            <Book size={24} />
-          </Link>
-        </li>
-      </ul>
-    </nav>
   );
 }
