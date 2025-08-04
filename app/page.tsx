@@ -17,13 +17,6 @@ export default function Home() {
           </p>
         </div>
 
-        <h2>Writing</h2>
-        <p>
-          I write about all things tech, finance and travel on my Substack{" "}
-          <ExternalLink href="https://perryfardella.substack.com">
-            here
-          </ExternalLink>
-        </p>
         <Projects />
         <div>
           <h2>Interviews</h2>
