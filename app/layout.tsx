@@ -1,10 +1,11 @@
 // import type { Metadata } from "next"; What was this being used for, do I need it?
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Book } from "lucide-react";
 import { NavBar } from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -94,6 +95,15 @@ function SocialLinks() {
             </li>
           );
         })}
+        <li key="blog" className="list-none mb-0">
+          <Link
+            href="/blog"
+            className="hover:opacity-60 transition-opacity"
+            aria-label="Blog"
+          >
+            <Book size={24} />
+          </Link>
+        </li>
       </ul>
     </nav>
   );
