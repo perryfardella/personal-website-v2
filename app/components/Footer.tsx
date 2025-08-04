@@ -1,4 +1,5 @@
-import { Book, Github, Link, Linkedin, Mail, Twitter } from "lucide-react";
+import { Book, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   const socialLinks = [
