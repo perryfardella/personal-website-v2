@@ -8,14 +8,9 @@ export default function Home() {
       <main className="space-y-8">
         <div className="space-y-4">
           <p>
-            Hey, I&apos;m a Software Engineer and Tax Accountant. currently
-            travelling the world full-time as I take a year sabbatical from my
-            job to chill out a little bit and work on side projects.
-          </p>
-          <p>
-            Away from the computer, I&apos;m a BJJ Blue Belt, absolute novice at
-            Muay Thai and enjoy reading, seeing live music, trying new
-            activities/foods and hanging out with my friends and family.
+            Hey, I&apos;m a Software Engineer and Tax Accountant. I&apos;m
+            currently travelling the world full-time as I work on side projects
+            and get my ass kicked in BJJ.
           </p>
         </div>
 
