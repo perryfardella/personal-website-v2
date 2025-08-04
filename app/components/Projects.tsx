@@ -47,8 +47,23 @@ export const Projects = () => {
     },
     {
       title: "Personal website",
+      description: "My personal website & blog, you're here right now!",
       githubUrl: "https://github.com/perryfardella/personal-website-v2",
       liveUrl: "https://perryfardella.com",
+    },
+    {
+      title: "Healthy Meals AI",
+      description:
+        "A tool to generate healthy meal ideas based on your preferences",
+      githubUrl: "https://github.com/perryfardella/healthy-meals-ai",
+      liveUrl: "https://healthy-meals-ai.vercel.app/",
+    },
+    {
+      title: "Smart Livestock Feeder",
+      description:
+        "A web app that connects to a cerboGX powered livestock feeder and allows you to feed your livestock remotely, monitor feed and water levels, and more.",
+      githubUrl: "https://github.com/perryfardella/smart-livestock-feeder",
+      liveUrl: "https://smart-livestock-feeder.vercel.app/",
     },
     {
       title: "CGT Calculator",
@@ -56,13 +71,6 @@ export const Projects = () => {
         "A tool to calculate your net capital gains tax from all sources",
       githubUrl: "https://github.com/perryfardella/cgt-calculator",
       liveUrl: "https://cgt-calculator.com",
-    },
-    {
-      title: "The Fucket List",
-      description:
-        "A list app for building a bucket list of stretch goals for life",
-      githubUrl: "https://github.com/perryfardella/fucket-list",
-      liveUrl: "https://fucket-list.vercel.app/",
     },
   ];
 
