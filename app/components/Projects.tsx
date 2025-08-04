@@ -76,7 +76,7 @@ export const Projects = () => {
 
   return (
     <section>
-      <h2>Projects</h2>
+      <h2>Latest Projects</h2>
       <ul className="mt-2">
         {projects.map((project) => (
           <ProjectItem key={project.githubUrl} {...project} />

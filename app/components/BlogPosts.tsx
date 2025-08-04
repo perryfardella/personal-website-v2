@@ -46,7 +46,7 @@ export async function BlogPosts() {
 
   return (
     <section>
-      <h2>Blog Posts</h2>
+      <h2>Latest Blog Posts</h2>
       <ul>
         {posts.map((post: BlogPost) => (
           <li key={post.slug}>
